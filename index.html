@@ -21,6 +21,7 @@
     --ink-60: oklch(42% 0.018 258);
     --ink-50: oklch(54% 0.014 258);
     --ink-30: oklch(68% 0.01 258);
+    --block-gap: 80px;
   }
   @media (max-width: 640px) {
     :root { --gutter: 24px; --indent: 24px; }
@@ -92,7 +93,7 @@
   .timeline__rail-wrap { position: relative; padding-left: var(--indent); max-width: 820px; }
   .timeline__rail { position: absolute; left: 4px; top: 8px; bottom: 8px; width: 1px; background: oklch(from var(--ink) l c h / 15%); }
 
-  .entry { position: relative; margin-bottom: 80px; }
+  .entry { position: relative; margin-bottom: var(--block-gap); }
   .entry:last-child { margin-bottom: 0; }
   .js .entry {
     opacity: 0; transform: translateY(28px);
@@ -132,7 +133,7 @@
   .bullet__text { font-size: 17px; line-height: 1.6; color: var(--ink-80); max-width: 62ch; text-wrap: pretty; }
 
   /* Tease / the one CTA */
-  .tease { max-width: 24ch; padding-left: var(--indent); scroll-margin-top: 24px; }
+  .tease { max-width: 24ch; padding-left: var(--indent); margin-top: var(--block-gap); scroll-margin-top: 24px; }
   .js .tease {
     opacity: 0; transform: translateY(28px);
     transition: opacity 0.9s ease, transform 0.9s ease;
